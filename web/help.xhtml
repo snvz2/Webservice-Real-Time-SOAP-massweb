@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+   <head><title>IGNORED</title></head>
+   <body>
+      <ui:composition template="/templates/masterLayout.xhtml">
+         <ui:define name="windowTitle">
+            #{msgs.earth}
+         </ui:define>
+
+         <ui:define name="content">
+		        <p> </p>
+                 <h:outputText value="Customer Support 24/7: 1-800-437-7579"/>
+		
+                 <p>Добро пожаловать на портал обмена МАСС.</p>
+                 <p>Bienvenue sur le portail d'échange de masse.</p>
+                 <p>Καλώς ήρθατε στην ιστοσελίδα μαζική ανταλλαγή.</p>
+                 <p>W交換ポータルへようこそ</p>
+		 <p>질량 교환 포털에 오신 것을 환영합니다</p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+	<h:form>		 
+            <h:panelGrid columns="3" cellpadding="10" cellspacing="3">	 	
+                    <h:commandLink action="planetarium">
+                        <h:graphicImage library="images" name="contact.png"/>
+                    </h:commandLink>
+                    <h:commandLink action="planetarium">
+                        <h:graphicImage library="images" name="follow.png"/>
+                    </h:commandLink>
+                    <h:commandLink action="login">
+                        <h:graphicImage library="images" name="logout.png"/>
+                    </h:commandLink>
+            </h:panelGrid>
+        </h:form>
+         </ui:define>
+      </ui:composition>
+   </body>
+</html>

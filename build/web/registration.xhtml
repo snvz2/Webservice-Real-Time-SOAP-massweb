@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+   <head><title>IGNORED</title></head>
+   <body>
+      <ui:composition template="/templates/masterLayout.xhtml">     
+         <ui:define name="windowTitle">
+            #{msgs.registrationTitle}
+         </ui:define> 
+         
+		 <ui:define name="heading">
+            <ui:include src="/sections/registration/header.xhtml"/>
+         </ui:define>
+
+         <ui:define name="sidebarLeft">
+            <ui:include src="/sections/registration/sidebarLeft.xhtml"/>
+         </ui:define>
+		 
+      <ui:define name="content">     
+    <h:outputText value="#{msgs.indexPageTitle}" styleClass="emphasis"/>
+      <h:form>
+         <h:panelGrid columns="2">
+            #{msgs.namePrompt}
+            <h:inputText value="#{form.name}"/>
+            #{msgs.contactMePrompt}
+            <h:selectBooleanCheckbox value="#{form.contactMe}"/>
+            #{msgs.bestDayPrompt}
+            <h:selectManyMenu value="#{form.bestDaysToContact}">
+               <f:selectItems value="#{form.daysOfTheWeek}" var="w"
+                              itemLabel="#{w.dayName}" itemValue="#{w.dayNumber}"/>
+            </h:selectManyMenu>
+            #{msgs.yearOfBirthPrompt}
+            <h:selectOneMenu value="#{form.yearOfBirth}" required="true">
+               <f:selectItems value="#{form.yearItems}"/>
+            </h:selectOneMenu>
+            #{msgs.colorPrompt}
+            <h:selectManyCheckbox value="#{form.colors}"
+                                  selectedClass="selected" disabledClass="disabled"
+                                  onchange="submit()">
+               <f:selectItems value="#{form.colorItems}"/>
+            </h:selectManyCheckbox>
+            #{msgs.languagePrompt}
+            <h:selectManyListbox size="5" value="#{form.languages}">
+               <f:selectItems value="#{form.languageItems}"/>
+            </h:selectManyListbox>
+            #{msgs.educationPrompt}
+            <h:selectOneRadio value="#{form.education}" 
+                              layout="pageDirection">
+               <f:selectItems value="#{form.educationItems}"/>
+            </h:selectOneRadio>
+         </h:panelGrid>
+
+          <p>
+
+          </p>
+           <p>
+                    <h:commandLink action="registrationdone">
+                        <h:graphicImage library="images" name="join.png"/>
+                    </h:commandLink>
+           </p>
+      </h:form>
+      <h:messages/>
+      <div>
+             <h:form>
+                 <h:panelGrid columns="3" cellpadding="10" cellspacing="3">
+                    <h:commandLink action="planetarium">
+                        <h:graphicImage library="images" name="contact.png"/>
+                    </h:commandLink>
+                    <h:commandLink action="planetarium">
+                        <h:graphicImage library="images" name="follow.png"/>
+                    </h:commandLink>
+                    <h:commandLink action="planetarium">
+                        <h:graphicImage library="images" name="info.png"/>
+                    </h:commandLink>
+                 </h:panelGrid>
+             </h:form>
+      </div>
+
+      </ui:define>
+      </ui:composition>
+   </body>
+</html>

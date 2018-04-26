@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+   <head><title>IGNORED</title></head>
+   <body>
+      <ui:composition template="/templates/masterLayout.xhtml">
+         <ui:define name="windowTitle">
+            #{msgs.loginTitle}
+         </ui:define>
+
+         <ui:define name="heading">
+            <ui:include src="/sections/login/header.xhtml"/>
+         </ui:define>
+
+         <ui:define name="sidebarLeft">
+            <ui:include src="/sections/login/sidebarLeft.xhtml"/>
+         </ui:define>
+
+         <ui:define name="content">
+            <h:form>
+               <h:panelGrid columns="2" cellpadding="10" cellspacing="3">
+                  #{msgs.namePrompt}
+                  <h:inputText id="name" value="#{login.name}"/>
+                  #{msgs.passwordPrompt}
+                  <h:inputSecret id="password" value="#{login.password}"/>
+		#{msgs.space} 
+                <!--h:commandLink action="welcome"-->
+                <h:commandLink action="#{login.useractivate}">
+                    <h:graphicImage library="images" name="login.png"/>
+                </h:commandLink>
+
+		#{msgs.space}
+		<h:commandLink action="registration">
+                      <h:graphicImage library="images" name="register.png"/>
+                </h:commandLink>
+                  
+                <h:commandLink action="planetarium">
+                        <h:graphicImage library="images" name="contact.png"/>
+                </h:commandLink>
+                <h:commandLink action="planetarium">
+                        <h:graphicImage library="images" name="follow.png"/>
+                </h:commandLink>
+               </h:panelGrid>
+            </h:form>
+
+             <h:form>
+                  <h:panelGrid columns="4">
+                       <h:commandLink action="planetarium">
+                           <h:graphicImage library="images" name="fb.png"/>
+                       </h:commandLink>
+                      <h:commandLink action="planetarium">
+                          <h:graphicImage library="images" name="sm5.png"/>
+                      </h:commandLink>
+                      <h:commandLink action="planetarium">
+                          <h:graphicImage library="images" name="sm2.png"/>
+                      </h:commandLink>
+                      <h:commandLink action="planetarium">
+                          <h:graphicImage library="images" name="sm1.png"/>
+                      </h:commandLink>
+                   </h:panelGrid>
+             </h:form>
+         </ui:define>
+      </ui:composition>
+   </body>
+</html>

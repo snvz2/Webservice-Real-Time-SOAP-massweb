@@ -1,0 +1,97 @@
+#heading {
+   padding: 20px;
+   height: 30px;
+   margin-bottom: 10px;
+   background: #B0E0E6;
+   border: 1px solid darkGray;
+}
+
+#sidebarLeft {
+   border: thin solid lightGray;
+   padding: 5px;
+   height: 440px;
+   width: 200px;
+   background: #ffffff;
+}
+
+#content {
+   padding: 5px;
+   border: thin solid lightGray;
+   background: #ffffff;
+   background-image: url("#{resource['images:map.png']}");
+   position: absolute;
+   right: 8px;
+   left: 230px;
+   height: 440px;
+   width: 800;
+   top: 90px;
+   font-size: 1.2em;
+   font-weight: bold;
+   font-family: Rockwell;
+}
+
+#content1 {
+   padding: 5px;
+   border: thin solid lightGray;
+   background: #ffffff;
+   background-image: url("#{resource['images:map.png']}");
+   position: absolute;
+   right: 8px;
+   left: 230px;
+   height: 440px;
+   width: 800;
+   top: 90px;
+   font-size: 0.8em;
+   font-weight: bold;
+   font-family: Rockwell;
+}
+.header {
+   font-size: 1.6em;
+   font-style: normal;
+   font-family: Rockwell;
+   text-align: center;
+   color:#0000FF
+}
+
+.planetImage {
+   padding: 5px;
+   text-align: center;
+}
+
+.planetImageSelected {
+   padding: 5px;
+   text-align: center;
+   background: #fefeef;
+   border: thin solid lightGray;
+}
+
+.welcome {
+   font-size: 1.6em;
+   font-style: normal;
+   font-family: Rockwell;
+   color:#0000FF
+}
+
+.welcomeImage {
+   margin-top: 10px;
+   text-align: center;
+}
+
+.emphasis {
+   font-style: normal;
+   font-size: 1.4em;
+}
+
+.disabled {
+   color: gray;
+}
+
+.selected {
+   font-weight: bold; 
+}
+.cont {
+   font-size: 1.25em;
+   font-style: normal;
+   font-weight: bold;
+   font-family: Palatino;
+}
